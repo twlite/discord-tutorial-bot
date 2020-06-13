@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     match(args.join(" ").toLowerCase(), message.guild) ||
     message.author;
 
-  let level = client.db.get(`level_${user.id}`);
+  let level = client.db.get(`level_${user.id}`) || 0;
   level = level.toString();
   let exp = client.db.get(`xp_${user.id}`) || 0;
   let neededXP = Math.floor(Math.pow(level / 0.1, 2));
