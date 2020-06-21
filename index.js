@@ -4,7 +4,7 @@ const Canvacord = require("canvacord");
 const fs = require("fs");
 
 client.db = require("quick.db");
-client.canvas = new Canvacord.Canvas();
+client.canvas = new Canvacord();
 client.commands = new Discord.Collection();
 client.cooldown = new Discord.Collection();
 client.config = {
