@@ -29,6 +29,7 @@
     "discord.js": "^12.2.0",
     "quick.db": "^7.1.1",
     "canvacord": "^3.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "twemoji-parser": "^13.0.0"
   }
 }
