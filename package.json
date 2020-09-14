@@ -27,6 +27,7 @@
   "homepage": "https://github.com/Snowflake107/discord-leveling-bot#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
+    "hastebin-gen": "^2.0.5",
     "quick.db": "^7.1.1",
     "canvacord": "^3.0.0",
     "node-fetch": "^2.6.0",
