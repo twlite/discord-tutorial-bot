@@ -9,7 +9,7 @@ module.exports.run = (client, message, args) => {
 
     hastebin(users.join("\n"))
         .then(haste => {
-            message.channel.send(`${users.length + 1} Users found with discriminator **#${query}**!\n${haste}`);
+            message.channel.send(`${users.length} Users found with discriminator **#${query}**!\n${haste}`);
         })
         .catch(e => {
             message.channel.send("Something went wrong, please try again later!");
