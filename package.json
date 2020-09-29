@@ -1,36 +1,23 @@
 {
-  "name": "discord-leveling-bot",
+  "name": "discord-tutorial-bot",
   "version": "1.0.0",
-  "description": "Simple leveling bot for discord.",
+  "description": "tutorial bot for discord.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Snowflake107/discord-leveling-bot.git"
-  },
-  "keywords": [
-    "leveling",
-    "xpbot",
-    "quick.db-leveling",
-    "quick.db"
-  ],
   "author": "Snowflake107",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Snowflake107/discord-leveling-bot/issues"
-  },
   "engines": {
     "node": "12.x"
   },
-  "homepage": "https://github.com/Snowflake107/discord-leveling-bot#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
     "hastebin-gen": "^2.0.5",
     "quick.db": "^7.1.1",
     "canvacord": "^3.0.0",
     "node-fetch": "^2.6.0",
-    "twemoji-parser": "^13.0.0"
+    "twemoji-parser": "^13.0.0",
+    "jumble-words": "^1.0.1"
   }
 }
