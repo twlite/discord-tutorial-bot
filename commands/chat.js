@@ -18,10 +18,11 @@ module.exports.run = (client, message, args) => {
         message.channel.send(data.response);
     });*/
     // part three
-    fetch (`https://api.snowflakedev.xyz/chatbot?message=${encodeURIComponent(message.content)}&name=${encodeURIComponent(client.user.username)}`).then(data => {
+    fetch (`https://api.snowflakedev.xyz/chatbot?message=${encodeURIComponent(message.content)}&name=${encodeURIComponent(client.user.username)}`)
+        .then(data => {
         const json = data.json();
         message.channel.send(json.message);
-    }
+    });
 }
 
 module.exports.help = {
