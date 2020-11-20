@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-module.exports.run = (client, message, args) {
+module.exports.run = (client, message, args) => {
 fetch(`https://api.snowflakedev.xyz/meme`)
 .then(response => {
         response.json()
