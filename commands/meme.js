@@ -1,28 +1,18 @@
-const fetch = require('node-fetch');
-
-module.exports.run = (client, message, args) => {
-	fetch(`https://api.snowflakedev.xyz/meme`)
-		.then(response => response.json())
-		.then(json => {
-			const meme = {
-				title: json.title,
-				img: json.url,
-				link: json.link,
-				subreddit: json.subreddit
-			}
-
+const Discord = require("discord.js")
+module.exports.run = (client, message, args, api) => {
+	api.meme().then(meme => {
 			const memeembed = new Discord.MessageEmbed()
 				.setTitle(`${meme.title}`)
-				.setImage(meme.img)
+				.setImage(meme.url)
 				.setColor('RANDOM')
 				.setURL(meme.link);
 
 			return message.channel.send(memeembed)
-		})
 		.catch(e => {
 			console.error(e);
 			message.channel.send("something went wrong!");
 		});
+	});
 }
 
 module.exports.help = {
