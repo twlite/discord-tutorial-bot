@@ -18,7 +18,7 @@
     "canvacord": "^5.0.4",
     "node-fetch": "^2.6.0",
     "twemoji-parser": "^13.0.0",
-     "snowflake-api": "^1.1.0",
+    "snowflake-api": "^3.0.3",
     "jumble-words": "^1.0.1"
   }
 }
