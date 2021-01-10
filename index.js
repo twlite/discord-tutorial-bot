@@ -1,18 +1,20 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-const snowflake = require("snowflake-api");
+const Snowflake = require("snowflake-api");
 
 client.db = require("quick.db");
 client.commands = new Discord.Collection();
 client.cooldown = new Discord.Collection();
 client.config = {
     TOKEN: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", //Discord Bot Token
-    API_Token: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", //API Token found at http://api.snowflakedev.cf:9019/dashboard
+    API_TOKEN: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", //API Token found at http://api.snowflakedev.cf:9019/dashboard
     prefix: "!",
     cooldown: 15000
 };
-const api = new snowflake.API(client.config.API_Token);
+const api = new Snowflake.Client(client.config.API_TOKEN);
+client.snowapi = api;
+
 // Load Commands
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
